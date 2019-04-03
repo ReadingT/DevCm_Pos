@@ -1,0 +1,340 @@
+2019-02-01T10:02:23.7824726+07:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-02-01T10:02:23.8415152+07:00  [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-02-01T10:02:23.9407311+07:00  [INF] Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0" (0723d8ff)
+2019-02-01T10:02:24.0226350+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Category] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2019-02-01T10:02:24.0831362+07:00  [INF] User profile is available. Using '"C:\Users\Pote_Nattpong\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2019-02-01T10:02:24.6499464+07:00 0HLK7U6OEQL96:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/   (ca22a1cb)
+2019-02-01T10:02:24.6911824+07:00 0HLK7U6OEQL96:00000001 [INF] Executing endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (500cc934)
+2019-02-01T10:02:24.7132179+07:00 0HLK7U6OEQL96:00000001 [INF] Route matched with "{action = \"Index\", controller = \"product\"}". Executing action "cm_pos.productcontrollers.productController.Index (cm_pos)" (a44c0341)
+2019-02-01T10:02:24.7307356+07:00 0HLK7U6OEQL96:00000001 [INF] Executing action method "cm_pos.productcontrollers.productController.Index (cm_pos)" - Validation state: Valid (dad538d7)
+2019-02-01T10:02:24.7414143+07:00 0HLK7U6OEQL96:00000001 [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-02-01T10:02:24.7440219+07:00 0HLK7U6OEQL96:00000001 [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-02-01T10:02:24.8415596+07:00 0HLK7U6OEQL96:00000001 [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Product_ID], [p].[Category_ID], [p].[Code_Name], [p].[Detail], [p].[Image], [p].[Name], [p].[Price], [p].[Timestamp], [p.Categories].[Category_ID], [p.Categories].[Description], [p.Categories].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Category] AS [p.Categories] ON [p].[Category_ID] = [p.Categories].[Category_ID]
+ORDER BY [p].[Product_ID]" (0723d8ff)
+2019-02-01T10:02:24.9133755+07:00 0HLK7U6OEQL96:00000001 [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p.ProductsSizeList].[ID], [p.ProductsSizeList].[Count], [p.ProductsSizeList].[Product_ID], [p.ProductsSizeList].[Size]
+FROM [Product_Size] AS [p.ProductsSizeList]
+INNER JOIN (
+    SELECT DISTINCT [p0].[Product_ID]
+    FROM [Products] AS [p0]
+    INNER JOIN [Category] AS [p.Categories0] ON [p0].[Category_ID] = [p.Categories0].[Category_ID]
+) AS [t] ON [p.ProductsSizeList].[Product_ID] = [t].[Product_ID]
+ORDER BY [t].[Product_ID]" (0723d8ff)
+2019-02-01T10:02:24.9384737+07:00 0HLK7U6OEQL96:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Category] AS [c]" (0723d8ff)
+2019-02-01T10:02:24.9471631+07:00 0HLK7U6OEQL96:00000001 [INF] Executed action method "cm_pos.productcontrollers.productController.Index (cm_pos)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 212.2402ms. (50a9e262)
+2019-02-01T10:02:24.9686617+07:00 0HLK7U6OEQL96:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-02-01T10:02:25.0666901+07:00 0HLK7U6OEQL96:00000001 [INF] Executed ViewResult - view "Index" executed in 108.7336ms. (f66409e9)
+2019-02-01T10:02:25.0708900+07:00 0HLK7U6OEQL96:00000001 [INF] Executed action "cm_pos.productcontrollers.productController.Index (cm_pos)" in 354.785ms (afa2e885)
+2019-02-01T10:02:25.0755474+07:00 0HLK7U6OEQL96:00000001 [INF] Executed endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (99874f2b)
+2019-02-01T10:02:25.0917718+07:00 0HLK7U6OEQL96:00000001 [INF] Request finished in 441.8622ms 200 text/html; charset=utf-8 (791a596a)
+2019-02-01T11:55:15.6494998+07:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-02-01T11:55:15.7062117+07:00  [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-02-01T11:57:35.0746287+07:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-02-01T11:57:35.1238593+07:00  [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-02-01T11:57:35.2377366+07:00  [INF] Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0" (0723d8ff)
+2019-02-01T11:57:35.3382271+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Category] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2019-02-01T11:57:35.4382084+07:00  [INF] User profile is available. Using '"C:\Users\Pote_Nattpong\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2019-02-01T11:57:36.6623434+07:00 0HLK8074BRT78:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/   (ca22a1cb)
+2019-02-01T11:57:36.7223365+07:00 0HLK8074BRT78:00000001 [INF] Executing endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (500cc934)
+2019-02-01T11:57:36.7589366+07:00 0HLK8074BRT78:00000001 [INF] Route matched with "{action = \"Index\", controller = \"product\"}". Executing action "cm_pos.productcontrollers.productController.Index (cm_pos)" (a44c0341)
+2019-02-01T11:57:36.7759636+07:00 0HLK8074BRT78:00000001 [INF] Executing action method "cm_pos.productcontrollers.productController.Index (cm_pos)" - Validation state: Valid (dad538d7)
+2019-02-01T11:57:36.7889570+07:00 0HLK8074BRT78:00000001 [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-02-01T11:57:36.7918952+07:00 0HLK8074BRT78:00000001 [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-02-01T11:57:36.9148377+07:00 0HLK8074BRT78:00000001 [INF] Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Product_ID], [p].[Category_ID], [p].[Code_Name], [p].[Detail], [p].[Image], [p].[Name], [p].[Price], [p].[Timestamp], [p.Categories].[Category_ID], [p.Categories].[Description], [p.Categories].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Category] AS [p.Categories] ON [p].[Category_ID] = [p.Categories].[Category_ID]
+ORDER BY [p].[Product_ID]" (0723d8ff)
+2019-02-01T11:57:37.0224621+07:00 0HLK8074BRT78:00000001 [INF] Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p.ProductsSizeList].[ID], [p.ProductsSizeList].[Count], [p.ProductsSizeList].[Product_ID], [p.ProductsSizeList].[Size]
+FROM [Product_Size] AS [p.ProductsSizeList]
+INNER JOIN (
+    SELECT DISTINCT [p0].[Product_ID]
+    FROM [Products] AS [p0]
+    INNER JOIN [Category] AS [p.Categories0] ON [p0].[Category_ID] = [p.Categories0].[Category_ID]
+) AS [t] ON [p.ProductsSizeList].[Product_ID] = [t].[Product_ID]
+ORDER BY [t].[Product_ID]" (0723d8ff)
+2019-02-01T11:57:37.0590923+07:00 0HLK8074BRT78:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Category] AS [c]" (0723d8ff)
+2019-02-01T11:57:37.0709221+07:00 0HLK8074BRT78:00000001 [INF] Executed action method "cm_pos.productcontrollers.productController.Index (cm_pos)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 287.901ms. (50a9e262)
+2019-02-01T11:57:37.1302691+07:00 0HLK8074BRT78:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-02-01T11:57:37.3314440+07:00 0HLK8074BRT78:00000001 [INF] Executed ViewResult - view "Index" executed in 246.8895ms. (f66409e9)
+2019-02-01T11:57:37.3348930+07:00 0HLK8074BRT78:00000001 [INF] Executed action "cm_pos.productcontrollers.productController.Index (cm_pos)" in 574.1572ms (afa2e885)
+2019-02-01T11:57:37.3387520+07:00 0HLK8074BRT78:00000001 [INF] Executed endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (99874f2b)
+2019-02-01T11:57:37.3561578+07:00 0HLK8074BRT78:00000001 [INF] Request finished in 692.0971ms 200 text/html; charset=utf-8 (791a596a)
+2019-02-01T11:57:49.6556762+07:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-02-01T11:57:49.7138943+07:00  [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-02-01T11:57:49.8173125+07:00  [INF] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0" (0723d8ff)
+2019-02-01T11:57:49.8953685+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Category] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2019-02-01T11:57:49.9653434+07:00  [INF] User profile is available. Using '"C:\Users\Pote_Nattpong\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2019-02-01T11:57:50.5334301+07:00 0HLK8078HFV56:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/   (ca22a1cb)
+2019-02-01T11:57:50.5726372+07:00 0HLK8078HFV56:00000001 [INF] Executing endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (500cc934)
+2019-02-01T11:57:50.5909460+07:00 0HLK8078HFV56:00000001 [INF] Route matched with "{action = \"Index\", controller = \"product\"}". Executing action "cm_pos.productcontrollers.productController.Index (cm_pos)" (a44c0341)
+2019-02-01T11:57:50.6098794+07:00 0HLK8078HFV56:00000001 [INF] Executing action method "cm_pos.productcontrollers.productController.Index (cm_pos)" - Validation state: Valid (dad538d7)
+2019-02-01T11:57:50.6213531+07:00 0HLK8078HFV56:00000001 [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2019-02-01T11:57:50.6238704+07:00 0HLK8078HFV56:00000001 [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-02-01T11:57:50.7202264+07:00 0HLK8078HFV56:00000001 [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Product_ID], [p].[Category_ID], [p].[Code_Name], [p].[Detail], [p].[Image], [p].[Name], [p].[Price], [p].[Timestamp], [p.Categories].[Category_ID], [p.Categories].[Description], [p.Categories].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Category] AS [p.Categories] ON [p].[Category_ID] = [p.Categories].[Category_ID]
+ORDER BY [p].[Product_ID]" (0723d8ff)
+2019-02-01T11:57:50.7861765+07:00 0HLK8078HFV56:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p.ProductsSizeList].[ID], [p.ProductsSizeList].[Count], [p.ProductsSizeList].[Product_ID], [p.ProductsSizeList].[Size]
+FROM [Product_Size] AS [p.ProductsSizeList]
+INNER JOIN (
+    SELECT DISTINCT [p0].[Product_ID]
+    FROM [Products] AS [p0]
+    INNER JOIN [Category] AS [p.Categories0] ON [p0].[Category_ID] = [p.Categories0].[Category_ID]
+) AS [t] ON [p.ProductsSizeList].[Product_ID] = [t].[Product_ID]
+ORDER BY [t].[Product_ID]" (0723d8ff)
+2019-02-01T11:57:50.8096027+07:00 0HLK8078HFV56:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Category] AS [c]" (0723d8ff)
+2019-02-01T11:57:50.8195343+07:00 0HLK8078HFV56:00000001 [INF] Executed action method "cm_pos.productcontrollers.productController.Index (cm_pos)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 205.4149ms. (50a9e262)
+2019-02-01T11:57:50.8400875+07:00 0HLK8078HFV56:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-02-01T11:57:50.9524861+07:00 0HLK8078HFV56:00000001 [INF] Executed ViewResult - view "Index" executed in 121.6758ms. (f66409e9)
+2019-02-01T11:57:50.9578422+07:00 0HLK8078HFV56:00000001 [INF] Executed action "cm_pos.productcontrollers.productController.Index (cm_pos)" in 363.7027ms (afa2e885)
+2019-02-01T11:57:50.9612453+07:00 0HLK8078HFV56:00000001 [INF] Executed endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (99874f2b)
+2019-02-01T11:57:50.9834959+07:00 0HLK8078HFV56:00000001 [INF] Request finished in 449.7222ms 200 text/html; charset=utf-8 (791a596a)
+2019-02-01T13:40:07.2780658+07:00  [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.Sqlite"' with options: "None" (9958f5bb)
+2019-02-01T13:40:07.3967431+07:00  [INF] Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-01T13:40:07.4382107+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-01T13:40:07.4453115+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"Category\" (
+    \"Category_ID\" INTEGER NOT NULL CONSTRAINT \"PK_Category\" PRIMARY KEY AUTOINCREMENT,
+    \"Name\" TEXT NULL,
+    \"Description\" TEXT NULL
+);" (0723d8ff)
+2019-02-01T13:40:07.4469097+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"Products\" (
+    \"Product_ID\" INTEGER NOT NULL CONSTRAINT \"PK_Products\" PRIMARY KEY AUTOINCREMENT,
+    \"Code_Name\" TEXT NOT NULL,
+    \"Name\" varchar(200) NULL DEFAULT 'unknows',
+    \"Detail\" TEXT NULL,
+    \"Price\" TEXT NOT NULL,
+    \"Category_ID\" INTEGER NOT NULL,
+    \"Image\" TEXT NULL,
+    \"Timestamp\" TEXT NULL DEFAULT (getdate()),
+    CONSTRAINT \"FK_Products_Category_Category_ID\" FOREIGN KEY (\"Category_ID\") REFERENCES \"Category\" (\"Category_ID\") ON DELETE CASCADE
+);" (0723d8ff)
+2019-02-01T13:40:07.4481150+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"Product_Size\" (
+    \"ID\" INTEGER NOT NULL CONSTRAINT \"PK_Product_Size\" PRIMARY KEY AUTOINCREMENT,
+    \"Product_ID\" INTEGER NOT NULL,
+    \"Size\" TEXT NULL,
+    \"Count\" INTEGER NOT NULL,
+    CONSTRAINT \"FK_Product_Size_Products_Product_ID\" FOREIGN KEY (\"Product_ID\") REFERENCES \"Products\" (\"Product_ID\") ON DELETE CASCADE
+);" (0723d8ff)
+2019-02-01T13:40:07.4493280+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX \"IX_Product_Size_Product_ID\" ON \"Product_Size\" (\"Product_ID\");" (0723d8ff)
+2019-02-01T13:40:07.4503595+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX \"IX_Products_Category_ID\" ON \"Products\" (\"Category_ID\");" (0723d8ff)
+2019-02-01T13:40:07.7577788+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-01T13:40:07.7656525+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM \"Category\" AS \"c\")
+    THEN 1 ELSE 0
+END" (0723d8ff)
+2019-02-01T13:40:07.8075431+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-01T13:40:07.8216143+07:00  [INF] Executed DbCommand ("5"ms) [Parameters=["@p0='?' (Size = 535), @p1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Category\" (\"Description\", \"Name\")
+VALUES (@p0, @p1);
+SELECT \"Category_ID\"
+FROM \"Category\"
+WHERE changes() = 1 AND \"Category_ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:07.8264480+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 516), @p1='?' (Size = 11)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Category\" (\"Description\", \"Name\")
+VALUES (@p0, @p1);
+SELECT \"Category_ID\"
+FROM \"Category\"
+WHERE changes() = 1 AND \"Category_ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:07.8282898+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 624), @p1='?' (Size = 11)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Category\" (\"Description\", \"Name\")
+VALUES (@p0, @p1);
+SELECT \"Category_ID\"
+FROM \"Category\"
+WHERE changes() = 1 AND \"Category_ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:07.8294281+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 609), @p1='?' (Size = 7)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Category\" (\"Description\", \"Name\")
+VALUES (@p0, @p1);
+SELECT \"Category_ID\"
+FROM \"Category\"
+WHERE changes() = 1 AND \"Category_ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:07.8306045+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 451), @p1='?' (Size = 16)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Category\" (\"Description\", \"Name\")
+VALUES (@p0, @p1);
+SELECT \"Category_ID\"
+FROM \"Category\"
+WHERE changes() = 1 AND \"Category_ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:07.8317947+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 339), @p1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Category\" (\"Description\", \"Name\")
+VALUES (@p0, @p1);
+SELECT \"Category_ID\"
+FROM \"Category\"
+WHERE changes() = 1 AND \"Category_ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:07.8329880+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 515), @p1='?' (Size = 12)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Category\" (\"Description\", \"Name\")
+VALUES (@p0, @p1);
+SELECT \"Category_ID\"
+FROM \"Category\"
+WHERE changes() = 1 AND \"Category_ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.0008257+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-01T13:40:08.0040203+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?', @p1='?' (Size = 7), @p2='?' (Size = 254), @p3='?' (Size = 6), @p4='?' (Size = 24), @p5='?', @p6='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Products\" (\"Category_ID\", \"Code_Name\", \"Detail\", \"Image\", \"Name\", \"Price\", \"Timestamp\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT \"Product_ID\"
+FROM \"Products\"
+WHERE changes() = 1 AND \"Product_ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.0070599+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?', @p1='?' (Size = 7), @p2='?' (Size = 493), @p3='?' (Size = 6), @p4='?' (Size = 22), @p5='?', @p6='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Products\" (\"Category_ID\", \"Code_Name\", \"Detail\", \"Image\", \"Name\", \"Price\", \"Timestamp\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT \"Product_ID\"
+FROM \"Products\"
+WHERE changes() = 1 AND \"Product_ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.0089626+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?', @p1='?' (Size = 7), @p2='?' (Size = 618), @p3='?' (Size = 6), @p4='?' (Size = 17), @p5='?', @p6='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Products\" (\"Category_ID\", \"Code_Name\", \"Detail\", \"Image\", \"Name\", \"Price\", \"Timestamp\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT \"Product_ID\"
+FROM \"Products\"
+WHERE changes() = 1 AND \"Product_ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.1098056+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-01T13:40:08.1124500+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 1)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Product_Size\" (\"Count\", \"Product_ID\", \"Size\")
+VALUES (@p0, @p1, @p2);
+SELECT \"ID\"
+FROM \"Product_Size\"
+WHERE changes() = 1 AND \"ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.1152371+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 1)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Product_Size\" (\"Count\", \"Product_ID\", \"Size\")
+VALUES (@p0, @p1, @p2);
+SELECT \"ID\"
+FROM \"Product_Size\"
+WHERE changes() = 1 AND \"ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.1165429+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 1)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Product_Size\" (\"Count\", \"Product_ID\", \"Size\")
+VALUES (@p0, @p1, @p2);
+SELECT \"ID\"
+FROM \"Product_Size\"
+WHERE changes() = 1 AND \"ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.1178598+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 2)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Product_Size\" (\"Count\", \"Product_ID\", \"Size\")
+VALUES (@p0, @p1, @p2);
+SELECT \"ID\"
+FROM \"Product_Size\"
+WHERE changes() = 1 AND \"ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.1192838+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 1)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Product_Size\" (\"Count\", \"Product_ID\", \"Size\")
+VALUES (@p0, @p1, @p2);
+SELECT \"ID\"
+FROM \"Product_Size\"
+WHERE changes() = 1 AND \"ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.1205389+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 1)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Product_Size\" (\"Count\", \"Product_ID\", \"Size\")
+VALUES (@p0, @p1, @p2);
+SELECT \"ID\"
+FROM \"Product_Size\"
+WHERE changes() = 1 AND \"ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.1218651+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 1)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Product_Size\" (\"Count\", \"Product_ID\", \"Size\")
+VALUES (@p0, @p1, @p2);
+SELECT \"ID\"
+FROM \"Product_Size\"
+WHERE changes() = 1 AND \"ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.1231949+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 2)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Product_Size\" (\"Count\", \"Product_ID\", \"Size\")
+VALUES (@p0, @p1, @p2);
+SELECT \"ID\"
+FROM \"Product_Size\"
+WHERE changes() = 1 AND \"ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.1243895+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 1)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Product_Size\" (\"Count\", \"Product_ID\", \"Size\")
+VALUES (@p0, @p1, @p2);
+SELECT \"ID\"
+FROM \"Product_Size\"
+WHERE changes() = 1 AND \"ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.1255643+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 1)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Product_Size\" (\"Count\", \"Product_ID\", \"Size\")
+VALUES (@p0, @p1, @p2);
+SELECT \"ID\"
+FROM \"Product_Size\"
+WHERE changes() = 1 AND \"ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.1267926+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 1)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Product_Size\" (\"Count\", \"Product_ID\", \"Size\")
+VALUES (@p0, @p1, @p2);
+SELECT \"ID\"
+FROM \"Product_Size\"
+WHERE changes() = 1 AND \"ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.1281571+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 2)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Product_Size\" (\"Count\", \"Product_ID\", \"Size\")
+VALUES (@p0, @p1, @p2);
+SELECT \"ID\"
+FROM \"Product_Size\"
+WHERE changes() = 1 AND \"ID\" = last_insert_rowid();" (0723d8ff)
+2019-02-01T13:40:08.3163071+07:00  [INF] User profile is available. Using '"C:\Users\Pote_Nattpong\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2019-02-01T13:40:09.6447878+07:00 0HLK820E3568B:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/   (ca22a1cb)
+2019-02-01T13:40:09.6993780+07:00 0HLK820E3568B:00000001 [INF] Executing endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (500cc934)
+2019-02-01T13:40:09.7184526+07:00 0HLK820E3568B:00000001 [INF] Route matched with "{action = \"Index\", controller = \"product\"}". Executing action "cm_pos.productcontrollers.productController.Index (cm_pos)" (a44c0341)
+2019-02-01T13:40:09.7347668+07:00 0HLK820E3568B:00000001 [INF] Executing action method "cm_pos.productcontrollers.productController.Index (cm_pos)" - Validation state: Valid (dad538d7)
+2019-02-01T13:40:09.7479766+07:00 0HLK820E3568B:00000001 [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.Sqlite"' with options: "None" (9958f5bb)
+2019-02-01T13:40:09.8448458+07:00 0HLK820E3568B:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-01T13:40:09.8505983+07:00 0HLK820E3568B:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p\".\"Product_ID\", \"p\".\"Category_ID\", \"p\".\"Code_Name\", \"p\".\"Detail\", \"p\".\"Image\", \"p\".\"Name\", \"p\".\"Price\", \"p\".\"Timestamp\", \"p.Categories\".\"Category_ID\", \"p.Categories\".\"Description\", \"p.Categories\".\"Name\"
+FROM \"Products\" AS \"p\"
+INNER JOIN \"Category\" AS \"p.Categories\" ON \"p\".\"Category_ID\" = \"p.Categories\".\"Category_ID\"
+ORDER BY \"p\".\"Product_ID\"" (0723d8ff)
+2019-02-01T13:40:09.8768947+07:00 0HLK820E3568B:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p.ProductsSizeList\".\"ID\", \"p.ProductsSizeList\".\"Count\", \"p.ProductsSizeList\".\"Product_ID\", \"p.ProductsSizeList\".\"Size\"
+FROM \"Product_Size\" AS \"p.ProductsSizeList\"
+INNER JOIN (
+    SELECT DISTINCT \"p0\".\"Product_ID\"
+    FROM \"Products\" AS \"p0\"
+    INNER JOIN \"Category\" AS \"p.Categories0\" ON \"p0\".\"Category_ID\" = \"p.Categories0\".\"Category_ID\"
+) AS \"t\" ON \"p.ProductsSizeList\".\"Product_ID\" = \"t\".\"Product_ID\"
+ORDER BY \"t\".\"Product_ID\"" (0723d8ff)
+2019-02-01T13:40:09.8907120+07:00 0HLK820E3568B:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-01T13:40:09.8928138+07:00 0HLK820E3568B:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM \"Category\" AS \"c\"" (0723d8ff)
+2019-02-01T13:40:09.9001058+07:00 0HLK820E3568B:00000001 [INF] Executed action method "cm_pos.productcontrollers.productController.Index (cm_pos)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 161.3083ms. (50a9e262)
+2019-02-01T13:40:09.9171311+07:00 0HLK820E3568B:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-02-01T13:40:10.2529658+07:00 0HLK820E3568B:00000001 [INF] Executed ViewResult - view "Index" executed in 344.9752ms. (f66409e9)
+2019-02-01T13:40:10.2550410+07:00 0HLK820E3568B:00000001 [INF] Executed action "cm_pos.productcontrollers.productController.Index (cm_pos)" in 534.7973ms (afa2e885)
+2019-02-01T13:40:10.2567685+07:00 0HLK820E3568B:00000001 [INF] Executed endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (99874f2b)
+2019-02-01T13:40:10.2690334+07:00 0HLK820E3568B:00000001 [INF] Request finished in 626.3549ms 200 text/html; charset=utf-8 (791a596a)

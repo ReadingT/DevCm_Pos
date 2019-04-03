@@ -1,0 +1,375 @@
+2019-02-06T10:19:28.1072413+07:00  [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.Sqlite"' with options: "None" (9958f5bb)
+2019-02-06T10:19:28.4173395+07:00  [INF] Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:19:28.4253887+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:19:28.4321540+07:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"type\" = 'table' AND \"rootpage\" IS NOT NULL;" (0723d8ff)
+2019-02-06T10:19:28.5209001+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:19:28.5337036+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM \"Category\" AS \"c\")
+    THEN 1 ELSE 0
+END" (0723d8ff)
+2019-02-06T10:19:28.6332953+07:00  [INF] User profile is available. Using '"C:\Users\Pote_Nattpong\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2019-02-06T10:19:31.7247542+07:00 0HLKBS7KIBRVP:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/   (ca22a1cb)
+2019-02-06T10:19:31.7861431+07:00 0HLKBS7KIBRVP:00000001 [INF] Executing endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (500cc934)
+2019-02-06T10:19:31.8265748+07:00 0HLKBS7KIBRVP:00000001 [INF] Route matched with "{action = \"Index\", controller = \"product\"}". Executing action "cm_pos.productcontrollers.productController.Index (cm_pos)" (a44c0341)
+2019-02-06T10:19:31.8590603+07:00 0HLKBS7KIBRVP:00000001 [INF] Executing action method "cm_pos.productcontrollers.productController.Index (cm_pos)" - Validation state: Valid (dad538d7)
+2019-02-06T10:19:31.8795887+07:00 0HLKBS7KIBRVP:00000001 [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.Sqlite"' with options: "None" (9958f5bb)
+2019-02-06T10:19:32.0560856+07:00 0HLKBS7KIBRVP:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:19:32.0659522+07:00 0HLKBS7KIBRVP:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p\".\"Product_ID\", \"p\".\"Category_ID\", \"p\".\"Code_Name\", \"p\".\"Detail\", \"p\".\"Image\", \"p\".\"Name\", \"p\".\"Price\", \"p\".\"Timestamp\", \"p.Categories\".\"Category_ID\", \"p.Categories\".\"Description\", \"p.Categories\".\"Name\"
+FROM \"Products\" AS \"p\"
+INNER JOIN \"Category\" AS \"p.Categories\" ON \"p\".\"Category_ID\" = \"p.Categories\".\"Category_ID\"
+ORDER BY \"p\".\"Product_ID\"" (0723d8ff)
+2019-02-06T10:19:32.1492143+07:00 0HLKBS7KIBRVP:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p.ProductsSizeList\".\"ID\", \"p.ProductsSizeList\".\"Count\", \"p.ProductsSizeList\".\"Product_ID\", \"p.ProductsSizeList\".\"Size\"
+FROM \"Product_Size\" AS \"p.ProductsSizeList\"
+INNER JOIN (
+    SELECT DISTINCT \"p0\".\"Product_ID\"
+    FROM \"Products\" AS \"p0\"
+    INNER JOIN \"Category\" AS \"p.Categories0\" ON \"p0\".\"Category_ID\" = \"p.Categories0\".\"Category_ID\"
+) AS \"t\" ON \"p.ProductsSizeList\".\"Product_ID\" = \"t\".\"Product_ID\"
+ORDER BY \"t\".\"Product_ID\"" (0723d8ff)
+2019-02-06T10:19:32.1764341+07:00 0HLKBS7KIBRVP:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:19:32.1797421+07:00 0HLKBS7KIBRVP:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM \"Category\" AS \"c\"" (0723d8ff)
+2019-02-06T10:19:32.1938020+07:00 0HLKBS7KIBRVP:00000001 [INF] Executed action method "cm_pos.productcontrollers.productController.Index (cm_pos)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 327.0885ms. (50a9e262)
+2019-02-06T10:19:32.2669276+07:00 0HLKBS7KIBRVP:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-02-06T10:19:32.5034314+07:00 0HLKBS7KIBRVP:00000001 [INF] Executed ViewResult - view "Index" executed in 291.1726ms. (f66409e9)
+2019-02-06T10:19:32.5065513+07:00 0HLKBS7KIBRVP:00000001 [INF] Executed action "cm_pos.productcontrollers.productController.Index (cm_pos)" in 677.3398ms (afa2e885)
+2019-02-06T10:19:32.5089006+07:00 0HLKBS7KIBRVP:00000001 [INF] Executed endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (99874f2b)
+2019-02-06T10:19:32.5378115+07:00 0HLKBS7KIBRVS:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/dist/css/AdminLTE.min.css   (ca22a1cb)
+2019-02-06T10:19:32.5399395+07:00 0HLKBS7KIBRVT:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/dist/css/skins/_all-skins.min.css   (ca22a1cb)
+2019-02-06T10:19:32.5415226+07:00 0HLKBS7KIBRVQ:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/bower_components/Ionicons/css/ionicons.min.css   (ca22a1cb)
+2019-02-06T10:19:32.5434089+07:00 0HLKBS7KIBRVR:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/myStyle.css   (ca22a1cb)
+2019-02-06T10:19:32.5463954+07:00 0HLKBS7KIBRVP:00000001 [INF] Request finished in 821.1046ms 200 text/html; charset=utf-8 (791a596a)
+2019-02-06T10:19:32.5503737+07:00 0HLKBS7KIBRVP:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/bower_components/font-awesome/css/font-awesome.min.css   (ca22a1cb)
+2019-02-06T10:19:32.5539461+07:00 0HLKBS7KIBRVO:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css   (ca22a1cb)
+2019-02-06T10:19:32.5710904+07:00 0HLKBS7KIBRVR:00000001 [INF] Sending file. Request path: '"/css/myStyle.css"'. Physical path: '"D:\cm_pos\wwwroot\css\myStyle.css"' (27b0a520)
+2019-02-06T10:19:32.5736037+07:00 0HLKBS7KIBRVR:00000001 [INF] Request finished in 29.5679ms 200 text/css (791a596a)
+2019-02-06T10:19:32.5754566+07:00 0HLKBS7KIBRVR:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css   (ca22a1cb)
+2019-02-06T10:19:32.5877907+07:00 0HLKBS7KIBRVP:00000002 [INF] Sending file. Request path: '"/adminlte/bower_components/font-awesome/css/font-awesome.min.css"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\bower_components\font-awesome\css\font-awesome.min.css"' (27b0a520)
+2019-02-06T10:19:32.5908530+07:00 0HLKBS7KIBRVP:00000002 [INF] Request finished in 41.9048ms 200 text/css (791a596a)
+2019-02-06T10:19:32.5927640+07:00 0HLKBS7KIBRVP:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/button_ghost.css   (ca22a1cb)
+2019-02-06T10:19:32.6740301+07:00 0HLKBS7KIBRVT:00000001 [INF] Sending file. Request path: '"/adminlte/dist/css/skins/_all-skins.min.css"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\dist\css\skins\_all-skins.min.css"' (27b0a520)
+2019-02-06T10:19:32.6779581+07:00 0HLKBS7KIBRVR:00000002 [INF] Sending file. Request path: '"/adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\bower_components\datatables.net-bs\css\dataTables.bootstrap.min.css"' (27b0a520)
+2019-02-06T10:19:32.6798017+07:00 0HLKBS7KIBRVT:00000001 [INF] Request finished in 140.6252ms 200 text/css (791a596a)
+2019-02-06T10:19:32.6885473+07:00 0HLKBS7KIBRVR:00000002 [INF] Request finished in 104.2945ms 200 text/css (791a596a)
+2019-02-06T10:19:32.6904082+07:00 0HLKBS7KIBRVP:00000003 [INF] Sending file. Request path: '"/css/button_ghost.css"'. Physical path: '"D:\cm_pos\wwwroot\css\button_ghost.css"' (27b0a520)
+2019-02-06T10:19:32.6922416+07:00 0HLKBS7KIBRVT:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/product/index.css   (ca22a1cb)
+2019-02-06T10:19:32.6938896+07:00 0HLKBS7KIBRVP:00000003 [INF] Request finished in 99.4865ms 200 text/css (791a596a)
+2019-02-06T10:19:32.6958966+07:00 0HLKBS7KIBRVQ:00000001 [INF] Sending file. Request path: '"/adminlte/bower_components/Ionicons/css/ionicons.min.css"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\bower_components\Ionicons\css\ionicons.min.css"' (27b0a520)
+2019-02-06T10:19:32.6993126+07:00 0HLKBS7KIBRVP:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js   (ca22a1cb)
+2019-02-06T10:19:32.7019815+07:00 0HLKBS7KIBRVR:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/bower_components/jquery/dist/jquery.min.js   (ca22a1cb)
+2019-02-06T10:19:32.7076610+07:00 0HLKBS7KIBRVQ:00000001 [INF] Request finished in 160.3554ms 200 text/css (791a596a)
+2019-02-06T10:19:32.7108041+07:00 0HLKBS7KIBRVO:00000001 [INF] Sending file. Request path: '"/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\bower_components\bootstrap\dist\css\bootstrap.min.css"' (27b0a520)
+2019-02-06T10:19:32.7132867+07:00 0HLKBS7KIBRVQ:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js   (ca22a1cb)
+2019-02-06T10:19:32.7200253+07:00 0HLKBS7KIBRVO:00000001 [INF] Request finished in 159.402ms 200 text/css (791a596a)
+2019-02-06T10:19:32.7235440+07:00 0HLKBS7KIBRVS:00000001 [INF] Sending file. Request path: '"/adminlte/dist/css/AdminLTE.min.css"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\dist\css\AdminLTE.min.css"' (27b0a520)
+2019-02-06T10:19:32.7266524+07:00 0HLKBS7KIBRVO:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/bower_components/fastclick/lib/fastclick.js   (ca22a1cb)
+2019-02-06T10:19:32.7349537+07:00 0HLKBS7KIBRVS:00000001 [INF] Request finished in 189.8544ms 200 text/css (791a596a)
+2019-02-06T10:19:32.7378475+07:00 0HLKBS7KIBRVT:00000002 [INF] Sending file. Request path: '"/css/product/index.css"'. Physical path: '"D:\cm_pos\wwwroot\css\product\index.css"' (27b0a520)
+2019-02-06T10:19:32.7420221+07:00 0HLKBS7KIBRVS:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/dist/js/adminlte.min.js   (ca22a1cb)
+2019-02-06T10:19:32.7435345+07:00 0HLKBS7KIBRVT:00000002 [INF] Request finished in 57.7608ms 200 text/css (791a596a)
+2019-02-06T10:19:32.7510109+07:00 0HLKBS7KIBRVT:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js   (ca22a1cb)
+2019-02-06T10:19:32.7522371+07:00 0HLKBS7KIBRVP:00000004 [INF] Sending file. Request path: '"/adminlte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\bower_components\jquery-slimscroll\jquery.slimscroll.min.js"' (27b0a520)
+2019-02-06T10:19:32.7545771+07:00 0HLKBS7KIBRVP:00000004 [INF] Request finished in 58.3568ms 200 application/javascript (791a596a)
+2019-02-06T10:19:32.7570006+07:00 0HLKBS7KIBRVP:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js   (ca22a1cb)
+2019-02-06T10:19:32.7616406+07:00 0HLKBS7KIBRVO:00000002 [INF] Sending file. Request path: '"/adminlte/bower_components/fastclick/lib/fastclick.js"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\bower_components\fastclick\lib\fastclick.js"' (27b0a520)
+2019-02-06T10:19:32.7704223+07:00 0HLKBS7KIBRVO:00000002 [INF] Request finished in 41.4444ms 200 application/javascript (791a596a)
+2019-02-06T10:19:32.7857138+07:00 0HLKBS7KIBRVP:00000005 [INF] Sending file. Request path: '"/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\bower_components\datatables.net-bs\js\dataTables.bootstrap.min.js"' (27b0a520)
+2019-02-06T10:19:32.7857138+07:00 0HLKBS7KIBRVO:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/logo.png   (ca22a1cb)
+2019-02-06T10:19:32.7893550+07:00 0HLKBS7KIBRVP:00000005 [INF] Request finished in 31.0035ms 200 application/javascript (791a596a)
+2019-02-06T10:19:32.7928991+07:00 0HLKBS7KIBRVP:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/profile.jpg   (ca22a1cb)
+2019-02-06T10:19:32.7946151+07:00 0HLKBS7KIBRVQ:00000002 [INF] Sending file. Request path: '"/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\bower_components\bootstrap\dist\js\bootstrap.min.js"' (27b0a520)
+2019-02-06T10:19:32.7985866+07:00 0HLKBS7KIBRVQ:00000002 [INF] Request finished in 86.871ms 200 application/javascript (791a596a)
+2019-02-06T10:19:32.8030630+07:00 0HLKBS7KIBRVQ:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/ic_product.png   (ca22a1cb)
+2019-02-06T10:19:32.8089905+07:00 0HLKBS7KIBRVO:00000003 [INF] Sending file. Request path: '"/images/logo.png"'. Physical path: '"D:\cm_pos\wwwroot\images\logo.png"' (27b0a520)
+2019-02-06T10:19:32.8195567+07:00 0HLKBS7KIBRVO:00000003 [INF] Request finished in 38.6537ms 200 image/png (791a596a)
+2019-02-06T10:19:32.8208246+07:00 0HLKBS7KIBRVQ:00000003 [INF] Sending file. Request path: '"/images/ic_product.png"'. Physical path: '"D:\cm_pos\wwwroot\images\ic_product.png"' (27b0a520)
+2019-02-06T10:19:32.8233806+07:00 0HLKBS7KIBRVS:00000002 [INF] Sending file. Request path: '"/adminlte/dist/js/adminlte.min.js"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\dist\js\adminlte.min.js"' (27b0a520)
+2019-02-06T10:19:32.8266086+07:00 0HLKBS7KIBRVO:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/ic_catagory.png   (ca22a1cb)
+2019-02-06T10:19:32.8287535+07:00 0HLKBS7KIBRVQ:00000003 [INF] Request finished in 22.1684ms 200 image/png (791a596a)
+2019-02-06T10:19:32.8329841+07:00 0HLKBS7KIBRVS:00000002 [INF] Request finished in 89.1225ms 200 application/javascript (791a596a)
+2019-02-06T10:19:32.8374805+07:00 0HLKBS7KIBRVQ:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/ic_new.png   (ca22a1cb)
+2019-02-06T10:19:32.8403005+07:00 0HLKBS7KIBRVS:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/ic_out_of_stock.png   (ca22a1cb)
+2019-02-06T10:19:32.8427227+07:00 0HLKBS7KIBRVO:00000004 [INF] Sending file. Request path: '"/images/ic_catagory.png"'. Physical path: '"D:\cm_pos\wwwroot\images\ic_catagory.png"' (27b0a520)
+2019-02-06T10:19:32.8502520+07:00 0HLKBS7KIBRVO:00000004 [INF] Request finished in 23.4359ms 200 image/png (791a596a)
+2019-02-06T10:19:32.8532031+07:00 0HLKBS7KIBRVR:00000003 [INF] Sending file. Request path: '"/adminlte/bower_components/jquery/dist/jquery.min.js"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\bower_components\jquery\dist\jquery.min.js"' (27b0a520)
+2019-02-06T10:19:32.8552128+07:00 0HLKBS7KIBRVO:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/ic_edit.png   (ca22a1cb)
+2019-02-06T10:19:32.8573785+07:00 0HLKBS7KIBRVR:00000003 [INF] Request finished in 159.3478ms 200 application/javascript (791a596a)
+2019-02-06T10:19:32.8602146+07:00 0HLKBS7KIBRVQ:00000004 [INF] Sending file. Request path: '"/images/ic_new.png"'. Physical path: '"D:\cm_pos\wwwroot\images\ic_new.png"' (27b0a520)
+2019-02-06T10:19:32.8632554+07:00 0HLKBS7KIBRVR:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/ic_detail.png   (ca22a1cb)
+2019-02-06T10:19:32.8660297+07:00 0HLKBS7KIBRVQ:00000004 [INF] Request finished in 31.5888ms 200 image/png (791a596a)
+2019-02-06T10:19:32.8693234+07:00 0HLKBS7KIBRVO:00000005 [INF] Sending file. Request path: '"/images/ic_edit.png"'. Physical path: '"D:\cm_pos\wwwroot\images\ic_edit.png"' (27b0a520)
+2019-02-06T10:19:32.8719972+07:00 0HLKBS7KIBRVQ:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/cm_logo.png   (ca22a1cb)
+2019-02-06T10:19:32.8761967+07:00 0HLKBS7KIBRVO:00000005 [INF] Request finished in 19.0679ms 200 image/png (791a596a)
+2019-02-06T10:19:32.8789145+07:00 0HLKBS7KIBRVS:00000003 [INF] Sending file. Request path: '"/images/ic_out_of_stock.png"'. Physical path: '"D:\cm_pos\wwwroot\images\ic_out_of_stock.png"' (27b0a520)
+2019-02-06T10:19:32.8869104+07:00 0HLKBS7KIBRVO:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/ic_tel.png   (ca22a1cb)
+2019-02-06T10:19:32.8885135+07:00 0HLKBS7KIBRVS:00000003 [INF] Request finished in 45.7924ms 200 image/png (791a596a)
+2019-02-06T10:19:32.8929113+07:00 0HLKBS7KIBRVR:00000004 [INF] Sending file. Request path: '"/images/ic_detail.png"'. Physical path: '"D:\cm_pos\wwwroot\images\ic_detail.png"' (27b0a520)
+2019-02-06T10:19:32.8955396+07:00 0HLKBS7KIBRVS:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/ic_delete.png   (ca22a1cb)
+2019-02-06T10:19:32.8988316+07:00 0HLKBS7KIBRVR:00000004 [INF] Request finished in 35.4537ms 200 image/png (791a596a)
+2019-02-06T10:19:32.9018076+07:00 0HLKBS7KIBRVO:00000006 [INF] Sending file. Request path: '"/images/ic_tel.png"'. Physical path: '"D:\cm_pos\wwwroot\images\ic_tel.png"' (27b0a520)
+2019-02-06T10:19:32.9052365+07:00 0HLKBS7KIBRVR:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/ic_mail.png   (ca22a1cb)
+2019-02-06T10:19:32.9065738+07:00 0HLKBS7KIBRVQ:00000005 [INF] Sending file. Request path: '"/images/cm_logo.png"'. Physical path: '"D:\cm_pos\wwwroot\images\cm_logo.png"' (27b0a520)
+2019-02-06T10:19:32.9109324+07:00 0HLKBS7KIBRVO:00000006 [INF] Request finished in 26.3661ms 200 image/png (791a596a)
+2019-02-06T10:19:32.9162618+07:00 0HLKBS7KIBRVQ:00000005 [INF] Request finished in 40.7417ms 200 image/png (791a596a)
+2019-02-06T10:19:32.9193182+07:00 0HLKBS7KIBRVO:00000007 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/ic_line.png   (ca22a1cb)
+2019-02-06T10:19:32.9234630+07:00 0HLKBS7KIBRVT:00000003 [INF] Sending file. Request path: '"/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\bower_components\datatables.net\js\jquery.dataTables.min.js"' (27b0a520)
+2019-02-06T10:19:32.9260647+07:00 0HLKBS7KIBRVR:00000005 [INF] Sending file. Request path: '"/images/ic_mail.png"'. Physical path: '"D:\cm_pos\wwwroot\images\ic_mail.png"' (27b0a520)
+2019-02-06T10:19:32.9284496+07:00 0HLKBS7KIBRVP:00000006 [INF] Sending file. Request path: '"/images/profile.jpg"'. Physical path: '"D:\cm_pos\wwwroot\images\profile.jpg"' (27b0a520)
+2019-02-06T10:19:32.9308407+07:00 0HLKBS7KIBRVT:00000003 [INF] Request finished in 179.8362ms 200 application/javascript (791a596a)
+2019-02-06T10:19:32.9515397+07:00 0HLKBS7KIBRVP:00000006 [INF] Request finished in 139.042ms 200 image/jpeg (791a596a)
+2019-02-06T10:19:32.9660969+07:00 0HLKBS7KIBRVO:00000007 [INF] Sending file. Request path: '"/images/ic_line.png"'. Physical path: '"D:\cm_pos\wwwroot\images\ic_line.png"' (27b0a520)
+2019-02-06T10:19:32.9682725+07:00 0HLKBS7KIBRVR:00000005 [INF] Request finished in 27.1795ms 200 image/png (791a596a)
+2019-02-06T10:19:32.9702445+07:00 0HLKBS7KIBRVO:00000007 [INF] Request finished in 55.0803ms 200 image/png (791a596a)
+2019-02-06T10:19:32.9723964+07:00 0HLKBS7KIBRVQ:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/ic_facebook.png   (ca22a1cb)
+2019-02-06T10:19:32.9741729+07:00 0HLKBS7KIBRVR:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/bower_components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2019-02-06T10:19:32.9884483+07:00 0HLKBS7KIBRVS:00000004 [INF] Sending file. Request path: '"/images/ic_delete.png"'. Physical path: '"D:\cm_pos\wwwroot\images\ic_delete.png"' (27b0a520)
+2019-02-06T10:19:32.9909176+07:00 0HLKBS7KIBRVS:00000004 [INF] Request finished in 99.8305ms 200 image/png (791a596a)
+2019-02-06T10:19:32.9943479+07:00 0HLKBS7KIBRVQ:00000006 [INF] Sending file. Request path: '"/images/ic_facebook.png"'. Physical path: '"D:\cm_pos\wwwroot\images\ic_facebook.png"' (27b0a520)
+2019-02-06T10:19:32.9962181+07:00 0HLKBS7KIBRVS:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/ic_youtube.png   (ca22a1cb)
+2019-02-06T10:19:32.9998158+07:00 0HLKBS7KIBRVQ:00000006 [INF] Request finished in 78.0465ms 200 image/png (791a596a)
+2019-02-06T10:19:33.0134481+07:00 0HLKBS7KIBRVS:00000005 [INF] Sending file. Request path: '"/images/ic_youtube.png"'. Physical path: '"D:\cm_pos\wwwroot\images\ic_youtube.png"' (27b0a520)
+2019-02-06T10:19:33.0199983+07:00 0HLKBS7KIBRVS:00000005 [INF] Request finished in 21.7146ms 200 image/png (791a596a)
+2019-02-06T10:19:33.0211134+07:00 0HLKBS7KIBRVR:00000006 [INF] Sending file. Request path: '"/adminlte/bower_components/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\bower_components\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2019-02-06T10:19:33.0230516+07:00 0HLKBS7KIBRVR:00000006 [INF] Request finished in 52.7612ms 200 font/woff2 (791a596a)
+2019-02-06T10:19:33.2629224+07:00 0HLKBS7KIBRVR:00000007 [INF] Request starting HTTP/1.1 GET https://localhost:5001/adminlte/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2019-02-06T10:19:33.3808709+07:00 0HLKBS7KIBRVR:00000007 [INF] Sending file. Request path: '"/adminlte/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"D:\cm_pos\wwwroot\adminlte\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"' (27b0a520)
+2019-02-06T10:19:33.3836606+07:00 0HLKBS7KIBRVR:00000007 [INF] Request finished in 120.6132ms 200 font/woff2 (791a596a)
+2019-02-06T10:19:33.5152188+07:00 0HLKBS7KIBRVR:00000008 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/cmdev_logo.png   (ca22a1cb)
+2019-02-06T10:19:33.5237943+07:00 0HLKBS7KIBRVR:00000008 [INF] Sending file. Request path: '"/images/cmdev_logo.png"'. Physical path: '"D:\cm_pos\wwwroot\images\cmdev_logo.png"' (27b0a520)
+2019-02-06T10:19:33.5265214+07:00 0HLKBS7KIBRVR:00000008 [INF] Request finished in 12.1964ms 200 image/png (791a596a)
+2019-02-06T10:19:43.1906753+07:00 0HLKBS7KIBRVR:00000009 [INF] Request starting HTTP/1.1 GET https://localhost:5001/Product/Edit/3   (ca22a1cb)
+2019-02-06T10:19:43.1986028+07:00 0HLKBS7KIBRVR:00000009 [INF] Executing endpoint '"cm_pos.productcontrollers.productController.Edit (cm_pos)"' (500cc934)
+2019-02-06T10:19:43.2194329+07:00 0HLKBS7KIBRVR:00000009 [INF] Route matched with "{action = \"Edit\", controller = \"product\"}". Executing action "cm_pos.productcontrollers.productController.Edit (cm_pos)" (a44c0341)
+2019-02-06T10:19:43.2459460+07:00 0HLKBS7KIBRVR:00000009 [INF] Executing action method "cm_pos.productcontrollers.productController.Edit (cm_pos)" with arguments (["3"]) - Validation state: Valid (4e3479ed)
+2019-02-06T10:19:43.2509021+07:00 0HLKBS7KIBRVR:00000009 [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.Sqlite"' with options: "None" (9958f5bb)
+2019-02-06T10:19:43.3016656+07:00 0HLKBS7KIBRVR:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:19:43.3187278+07:00 0HLKBS7KIBRVR:00000009 [INF] Executed DbCommand ("9"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"Product_ID\", \"m\".\"Category_ID\", \"m\".\"Code_Name\", \"m\".\"Detail\", \"m\".\"Image\", \"m\".\"Name\", \"m\".\"Price\", \"m\".\"Timestamp\", \"m.Categories\".\"Category_ID\", \"m.Categories\".\"Description\", \"m.Categories\".\"Name\"
+FROM \"Products\" AS \"m\"
+INNER JOIN \"Category\" AS \"m.Categories\" ON \"m\".\"Category_ID\" = \"m.Categories\".\"Category_ID\"
+WHERE \"m\".\"Product_ID\" = @__id_0
+ORDER BY \"m\".\"Product_ID\"
+LIMIT 2" (0723d8ff)
+2019-02-06T10:19:43.3269650+07:00 0HLKBS7KIBRVR:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m.ProductsSizeList\".\"ID\", \"m.ProductsSizeList\".\"Count\", \"m.ProductsSizeList\".\"Product_ID\", \"m.ProductsSizeList\".\"Size\"
+FROM \"Product_Size\" AS \"m.ProductsSizeList\"
+INNER JOIN (
+    SELECT DISTINCT \"t\".*
+    FROM (
+        SELECT \"m0\".\"Product_ID\"
+        FROM \"Products\" AS \"m0\"
+        INNER JOIN \"Category\" AS \"m.Categories0\" ON \"m0\".\"Category_ID\" = \"m.Categories0\".\"Category_ID\"
+        WHERE \"m0\".\"Product_ID\" = @__id_0
+        ORDER BY \"m0\".\"Product_ID\"
+        LIMIT 1
+    ) AS \"t\"
+) AS \"t0\" ON \"m.ProductsSizeList\".\"Product_ID\" = \"t0\".\"Product_ID\"
+ORDER BY \"t0\".\"Product_ID\"" (0723d8ff)
+2019-02-06T10:19:43.3324343+07:00 0HLKBS7KIBRVR:00000009 [INF] Executed action method "cm_pos.productcontrollers.productController.Edit (cm_pos)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 83.9803ms. (50a9e262)
+2019-02-06T10:19:43.3698931+07:00 0HLKBS7KIBRVR:00000009 [INF] Executing ViewResult, running view "Edit". (c83d0e25)
+2019-02-06T10:19:43.4756458+07:00 0HLKBS7KIBRVR:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:19:43.4783586+07:00 0HLKBS7KIBRVR:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"c\".\"Category_ID\", \"c\".\"Description\", \"c\".\"Name\"
+FROM \"Category\" AS \"c\"" (0723d8ff)
+2019-02-06T10:19:43.5082241+07:00 0HLKBS7KIBRVR:00000009 [INF] Executed ViewResult - view "Edit" executed in 173.0905ms. (f66409e9)
+2019-02-06T10:19:43.5111233+07:00 0HLKBS7KIBRVR:00000009 [INF] Executed action "cm_pos.productcontrollers.productController.Edit (cm_pos)" in 288.933ms (afa2e885)
+2019-02-06T10:19:43.5141357+07:00 0HLKBS7KIBRVR:00000009 [INF] Executed endpoint '"cm_pos.productcontrollers.productController.Edit (cm_pos)"' (99874f2b)
+2019-02-06T10:19:43.5168917+07:00 0HLKBS7KIBRVR:00000009 [INF] Request finished in 326.6241ms 200 text/html; charset=utf-8 (791a596a)
+2019-02-06T10:19:45.9278790+07:00 0HLKBS7KIBRVR:0000000A [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/upload_files.css   (ca22a1cb)
+2019-02-06T10:19:45.9391229+07:00 0HLKBS7KIBRVS:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/product/create.css   (ca22a1cb)
+2019-02-06T10:19:45.9451567+07:00 0HLKBS7KIBRVR:0000000A [INF] Sending file. Request path: '"/css/upload_files.css"'. Physical path: '"D:\cm_pos\wwwroot\css\upload_files.css"' (27b0a520)
+2019-02-06T10:19:45.9491744+07:00 0HLKBS7KIBRVR:0000000A [INF] Request finished in 21.4795ms 200 text/css (791a596a)
+2019-02-06T10:19:45.9540961+07:00 0HLKBS7KIBRVS:00000006 [INF] Sending file. Request path: '"/css/product/create.css"'. Physical path: '"D:\cm_pos\wwwroot\css\product\create.css"' (27b0a520)
+2019-02-06T10:19:45.9566618+07:00 0HLKBS7KIBRVS:00000006 [INF] Request finished in 18.4915ms 200 text/css (791a596a)
+2019-02-06T10:19:46.3028457+07:00 0HLKBS7KIBRVS:00000007 [INF] Request starting HTTP/1.1 GET https://localhost:5001/files/pc.jpg   (ca22a1cb)
+2019-02-06T10:19:46.3074922+07:00 0HLKBS7KIBRVS:00000007 [INF] Request finished in 4.3648ms 404  (791a596a)
+2019-02-06T10:19:46.3336432+07:00 0HLKBS7KIBRVS:00000008 [INF] Request starting HTTP/1.1 GET https://localhost:5001/js/upload_files.js   (ca22a1cb)
+2019-02-06T10:19:46.3578488+07:00 0HLKBS7KIBRVR:0000000B [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/ic_photo.png   (ca22a1cb)
+2019-02-06T10:19:46.3679096+07:00 0HLKBS7KIBRVR:0000000B [INF] Sending file. Request path: '"/images/ic_photo.png"'. Physical path: '"D:\cm_pos\wwwroot\images\ic_photo.png"' (27b0a520)
+2019-02-06T10:19:46.3704576+07:00 0HLKBS7KIBRVR:0000000B [INF] Request finished in 13.4617ms 200 image/png (791a596a)
+2019-02-06T10:19:46.3735696+07:00 0HLKBS7KIBRVS:00000008 [INF] Sending file. Request path: '"/js/upload_files.js"'. Physical path: '"D:\cm_pos\wwwroot\js\upload_files.js"' (27b0a520)
+2019-02-06T10:19:46.3783833+07:00 0HLKBS7KIBRVS:00000008 [INF] Request finished in 44.6026ms 200 application/javascript (791a596a)
+2019-02-06T10:19:50.0643078+07:00 0HLKBS7KIBRVS:00000009 [INF] Request starting HTTP/1.1 GET https://localhost:5001/   (ca22a1cb)
+2019-02-06T10:19:50.0675153+07:00 0HLKBS7KIBRVS:00000009 [INF] Executing endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (500cc934)
+2019-02-06T10:19:50.0713411+07:00 0HLKBS7KIBRVS:00000009 [INF] Route matched with "{action = \"Index\", controller = \"product\"}". Executing action "cm_pos.productcontrollers.productController.Index (cm_pos)" (a44c0341)
+2019-02-06T10:19:50.0736224+07:00 0HLKBS7KIBRVS:00000009 [INF] Executing action method "cm_pos.productcontrollers.productController.Index (cm_pos)" - Validation state: Valid (dad538d7)
+2019-02-06T10:19:50.0772433+07:00 0HLKBS7KIBRVS:00000009 [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.Sqlite"' with options: "None" (9958f5bb)
+2019-02-06T10:19:50.0805268+07:00 0HLKBS7KIBRVS:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:19:50.0830858+07:00 0HLKBS7KIBRVS:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p\".\"Product_ID\", \"p\".\"Category_ID\", \"p\".\"Code_Name\", \"p\".\"Detail\", \"p\".\"Image\", \"p\".\"Name\", \"p\".\"Price\", \"p\".\"Timestamp\", \"p.Categories\".\"Category_ID\", \"p.Categories\".\"Description\", \"p.Categories\".\"Name\"
+FROM \"Products\" AS \"p\"
+INNER JOIN \"Category\" AS \"p.Categories\" ON \"p\".\"Category_ID\" = \"p.Categories\".\"Category_ID\"
+ORDER BY \"p\".\"Product_ID\"" (0723d8ff)
+2019-02-06T10:19:50.0854983+07:00 0HLKBS7KIBRVS:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p.ProductsSizeList\".\"ID\", \"p.ProductsSizeList\".\"Count\", \"p.ProductsSizeList\".\"Product_ID\", \"p.ProductsSizeList\".\"Size\"
+FROM \"Product_Size\" AS \"p.ProductsSizeList\"
+INNER JOIN (
+    SELECT DISTINCT \"p0\".\"Product_ID\"
+    FROM \"Products\" AS \"p0\"
+    INNER JOIN \"Category\" AS \"p.Categories0\" ON \"p0\".\"Category_ID\" = \"p.Categories0\".\"Category_ID\"
+) AS \"t\" ON \"p.ProductsSizeList\".\"Product_ID\" = \"t\".\"Product_ID\"
+ORDER BY \"t\".\"Product_ID\"" (0723d8ff)
+2019-02-06T10:19:50.0886227+07:00 0HLKBS7KIBRVS:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:19:50.0910169+07:00 0HLKBS7KIBRVS:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM \"Category\" AS \"c\"" (0723d8ff)
+2019-02-06T10:19:50.0941343+07:00 0HLKBS7KIBRVS:00000009 [INF] Executed action method "cm_pos.productcontrollers.productController.Index (cm_pos)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 17.6066ms. (50a9e262)
+2019-02-06T10:19:50.0963186+07:00 0HLKBS7KIBRVS:00000009 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-02-06T10:19:50.1001186+07:00 0HLKBS7KIBRVS:00000009 [INF] Executed ViewResult - view "Index" executed in 3.6893ms. (f66409e9)
+2019-02-06T10:19:50.1029862+07:00 0HLKBS7KIBRVS:00000009 [INF] Executed action "cm_pos.productcontrollers.productController.Index (cm_pos)" in 28.8075ms (afa2e885)
+2019-02-06T10:19:50.1055213+07:00 0HLKBS7KIBRVS:00000009 [INF] Executed endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (99874f2b)
+2019-02-06T10:19:50.1089301+07:00 0HLKBS7KIBRVS:00000009 [INF] Request finished in 43.7648ms 200 text/html; charset=utf-8 (791a596a)
+2019-02-06T10:19:52.3669323+07:00 0HLKBS7KIBRVS:0000000A [INF] Request starting HTTP/1.1 GET https://localhost:5001/Product/Detail/3   (ca22a1cb)
+2019-02-06T10:19:52.3723261+07:00 0HLKBS7KIBRVS:0000000A [INF] Executing endpoint '"cm_pos.productcontrollers.productController.Detail (cm_pos)"' (500cc934)
+2019-02-06T10:19:52.3765056+07:00 0HLKBS7KIBRVS:0000000A [INF] Route matched with "{action = \"Detail\", controller = \"product\"}". Executing action "cm_pos.productcontrollers.productController.Detail (cm_pos)" (a44c0341)
+2019-02-06T10:19:52.3793087+07:00 0HLKBS7KIBRVS:0000000A [INF] Executing action method "cm_pos.productcontrollers.productController.Detail (cm_pos)" with arguments (["3"]) - Validation state: Valid (4e3479ed)
+2019-02-06T10:19:52.3837695+07:00 0HLKBS7KIBRVS:0000000A [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.Sqlite"' with options: "None" (9958f5bb)
+2019-02-06T10:19:52.3870451+07:00 0HLKBS7KIBRVS:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:19:52.3899477+07:00 0HLKBS7KIBRVS:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"Product_ID\", \"m\".\"Category_ID\", \"m\".\"Code_Name\", \"m\".\"Detail\", \"m\".\"Image\", \"m\".\"Name\", \"m\".\"Price\", \"m\".\"Timestamp\", \"m.Categories\".\"Category_ID\", \"m.Categories\".\"Description\", \"m.Categories\".\"Name\"
+FROM \"Products\" AS \"m\"
+INNER JOIN \"Category\" AS \"m.Categories\" ON \"m\".\"Category_ID\" = \"m.Categories\".\"Category_ID\"
+WHERE \"m\".\"Product_ID\" = @__id_0
+ORDER BY \"m\".\"Product_ID\"
+LIMIT 2" (0723d8ff)
+2019-02-06T10:19:52.3942966+07:00 0HLKBS7KIBRVS:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m.ProductsSizeList\".\"ID\", \"m.ProductsSizeList\".\"Count\", \"m.ProductsSizeList\".\"Product_ID\", \"m.ProductsSizeList\".\"Size\"
+FROM \"Product_Size\" AS \"m.ProductsSizeList\"
+INNER JOIN (
+    SELECT DISTINCT \"t\".*
+    FROM (
+        SELECT \"m0\".\"Product_ID\"
+        FROM \"Products\" AS \"m0\"
+        INNER JOIN \"Category\" AS \"m.Categories0\" ON \"m0\".\"Category_ID\" = \"m.Categories0\".\"Category_ID\"
+        WHERE \"m0\".\"Product_ID\" = @__id_0
+        ORDER BY \"m0\".\"Product_ID\"
+        LIMIT 1
+    ) AS \"t\"
+) AS \"t0\" ON \"m.ProductsSizeList\".\"Product_ID\" = \"t0\".\"Product_ID\"
+ORDER BY \"t0\".\"Product_ID\"" (0723d8ff)
+2019-02-06T10:19:52.3969623+07:00 0HLKBS7KIBRVS:0000000A [INF] Executed action method "cm_pos.productcontrollers.productController.Detail (cm_pos)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 15.5279ms. (50a9e262)
+2019-02-06T10:19:52.4305051+07:00 0HLKBS7KIBRVS:0000000A [INF] Executing ViewResult, running view "Detail". (c83d0e25)
+2019-02-06T10:19:52.5839605+07:00 0HLKBS7KIBRVS:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:19:52.5867249+07:00 0HLKBS7KIBRVS:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"c\".\"Category_ID\", \"c\".\"Description\", \"c\".\"Name\"
+FROM \"Category\" AS \"c\"" (0723d8ff)
+2019-02-06T10:19:52.6010142+07:00 0HLKBS7KIBRVS:0000000A [INF] Executed ViewResult - view "Detail" executed in 201.7024ms. (f66409e9)
+2019-02-06T10:19:52.6031799+07:00 0HLKBS7KIBRVS:0000000A [INF] Executed action "cm_pos.productcontrollers.productController.Detail (cm_pos)" in 224.5326ms (afa2e885)
+2019-02-06T10:19:52.6057475+07:00 0HLKBS7KIBRVS:0000000A [INF] Executed endpoint '"cm_pos.productcontrollers.productController.Detail (cm_pos)"' (99874f2b)
+2019-02-06T10:19:52.6092297+07:00 0HLKBS7KIBRVS:0000000A [INF] Request finished in 241.31ms 200 text/html; charset=utf-8 (791a596a)
+2019-02-06T10:19:52.6564169+07:00 0HLKBS7KIBRVS:0000000B [INF] Request starting HTTP/1.1 GET https://localhost:5001/files/pc.jpg   (ca22a1cb)
+2019-02-06T10:19:52.6605729+07:00 0HLKBS7KIBRVS:0000000B [INF] Request finished in 2.6413ms 404  (791a596a)
+2019-02-06T10:19:54.5569359+07:00 0HLKBS7KIBRVS:0000000C [INF] Request starting HTTP/1.1 GET https://localhost:5001/   (ca22a1cb)
+2019-02-06T10:19:54.5601118+07:00 0HLKBS7KIBRVS:0000000C [INF] Executing endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (500cc934)
+2019-02-06T10:19:54.5634660+07:00 0HLKBS7KIBRVS:0000000C [INF] Route matched with "{action = \"Index\", controller = \"product\"}". Executing action "cm_pos.productcontrollers.productController.Index (cm_pos)" (a44c0341)
+2019-02-06T10:19:54.5657371+07:00 0HLKBS7KIBRVS:0000000C [INF] Executing action method "cm_pos.productcontrollers.productController.Index (cm_pos)" - Validation state: Valid (dad538d7)
+2019-02-06T10:19:54.5679860+07:00 0HLKBS7KIBRVS:0000000C [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.Sqlite"' with options: "None" (9958f5bb)
+2019-02-06T10:19:54.5705855+07:00 0HLKBS7KIBRVS:0000000C [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:19:54.5733860+07:00 0HLKBS7KIBRVS:0000000C [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p\".\"Product_ID\", \"p\".\"Category_ID\", \"p\".\"Code_Name\", \"p\".\"Detail\", \"p\".\"Image\", \"p\".\"Name\", \"p\".\"Price\", \"p\".\"Timestamp\", \"p.Categories\".\"Category_ID\", \"p.Categories\".\"Description\", \"p.Categories\".\"Name\"
+FROM \"Products\" AS \"p\"
+INNER JOIN \"Category\" AS \"p.Categories\" ON \"p\".\"Category_ID\" = \"p.Categories\".\"Category_ID\"
+ORDER BY \"p\".\"Product_ID\"" (0723d8ff)
+2019-02-06T10:19:54.5770015+07:00 0HLKBS7KIBRVS:0000000C [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p.ProductsSizeList\".\"ID\", \"p.ProductsSizeList\".\"Count\", \"p.ProductsSizeList\".\"Product_ID\", \"p.ProductsSizeList\".\"Size\"
+FROM \"Product_Size\" AS \"p.ProductsSizeList\"
+INNER JOIN (
+    SELECT DISTINCT \"p0\".\"Product_ID\"
+    FROM \"Products\" AS \"p0\"
+    INNER JOIN \"Category\" AS \"p.Categories0\" ON \"p0\".\"Category_ID\" = \"p.Categories0\".\"Category_ID\"
+) AS \"t\" ON \"p.ProductsSizeList\".\"Product_ID\" = \"t\".\"Product_ID\"
+ORDER BY \"t\".\"Product_ID\"" (0723d8ff)
+2019-02-06T10:19:54.5815984+07:00 0HLKBS7KIBRVS:0000000C [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:19:54.5845241+07:00 0HLKBS7KIBRVS:0000000C [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM \"Category\" AS \"c\"" (0723d8ff)
+2019-02-06T10:19:54.5867036+07:00 0HLKBS7KIBRVS:0000000C [INF] Executed action method "cm_pos.productcontrollers.productController.Index (cm_pos)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 18.9164ms. (50a9e262)
+2019-02-06T10:19:54.5887659+07:00 0HLKBS7KIBRVS:0000000C [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-02-06T10:19:54.5934622+07:00 0HLKBS7KIBRVS:0000000C [INF] Executed ViewResult - view "Index" executed in 3.9013ms. (f66409e9)
+2019-02-06T10:19:54.5960858+07:00 0HLKBS7KIBRVS:0000000C [INF] Executed action "cm_pos.productcontrollers.productController.Index (cm_pos)" in 30.031ms (afa2e885)
+2019-02-06T10:19:54.5982306+07:00 0HLKBS7KIBRVS:0000000C [INF] Executed endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (99874f2b)
+2019-02-06T10:19:54.6007031+07:00 0HLKBS7KIBRVS:0000000C [INF] Request finished in 44.4275ms 200 text/html; charset=utf-8 (791a596a)
+2019-02-06T10:20:09.0265770+07:00 0HLKBS7KIBRVS:0000000D [INF] Request starting HTTP/1.1 GET https://localhost:5001/   (ca22a1cb)
+2019-02-06T10:20:09.0289667+07:00 0HLKBS7KIBRVS:0000000D [INF] Executing endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (500cc934)
+2019-02-06T10:20:09.0313898+07:00 0HLKBS7KIBRVS:0000000D [INF] Route matched with "{action = \"Index\", controller = \"product\"}". Executing action "cm_pos.productcontrollers.productController.Index (cm_pos)" (a44c0341)
+2019-02-06T10:20:09.0336915+07:00 0HLKBS7KIBRVS:0000000D [INF] Executing action method "cm_pos.productcontrollers.productController.Index (cm_pos)" - Validation state: Valid (dad538d7)
+2019-02-06T10:20:09.0361084+07:00 0HLKBS7KIBRVS:0000000D [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.Sqlite"' with options: "None" (9958f5bb)
+2019-02-06T10:20:09.0392209+07:00 0HLKBS7KIBRVS:0000000D [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:20:09.0419043+07:00 0HLKBS7KIBRVS:0000000D [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p\".\"Product_ID\", \"p\".\"Category_ID\", \"p\".\"Code_Name\", \"p\".\"Detail\", \"p\".\"Image\", \"p\".\"Name\", \"p\".\"Price\", \"p\".\"Timestamp\", \"p.Categories\".\"Category_ID\", \"p.Categories\".\"Description\", \"p.Categories\".\"Name\"
+FROM \"Products\" AS \"p\"
+INNER JOIN \"Category\" AS \"p.Categories\" ON \"p\".\"Category_ID\" = \"p.Categories\".\"Category_ID\"
+ORDER BY \"p\".\"Product_ID\"" (0723d8ff)
+2019-02-06T10:20:09.0446573+07:00 0HLKBS7KIBRVS:0000000D [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p.ProductsSizeList\".\"ID\", \"p.ProductsSizeList\".\"Count\", \"p.ProductsSizeList\".\"Product_ID\", \"p.ProductsSizeList\".\"Size\"
+FROM \"Product_Size\" AS \"p.ProductsSizeList\"
+INNER JOIN (
+    SELECT DISTINCT \"p0\".\"Product_ID\"
+    FROM \"Products\" AS \"p0\"
+    INNER JOIN \"Category\" AS \"p.Categories0\" ON \"p0\".\"Category_ID\" = \"p.Categories0\".\"Category_ID\"
+) AS \"t\" ON \"p.ProductsSizeList\".\"Product_ID\" = \"t\".\"Product_ID\"
+ORDER BY \"t\".\"Product_ID\"" (0723d8ff)
+2019-02-06T10:20:09.0477288+07:00 0HLKBS7KIBRVS:0000000D [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:20:09.0504461+07:00 0HLKBS7KIBRVS:0000000D [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM \"Category\" AS \"c\"" (0723d8ff)
+2019-02-06T10:20:09.0532577+07:00 0HLKBS7KIBRVS:0000000D [INF] Executed action method "cm_pos.productcontrollers.productController.Index (cm_pos)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 16.9808ms. (50a9e262)
+2019-02-06T10:20:09.0562808+07:00 0HLKBS7KIBRVS:0000000D [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-02-06T10:20:09.0605785+07:00 0HLKBS7KIBRVS:0000000D [INF] Executed ViewResult - view "Index" executed in 4.7724ms. (f66409e9)
+2019-02-06T10:20:09.0629145+07:00 0HLKBS7KIBRVS:0000000D [INF] Executed action "cm_pos.productcontrollers.productController.Index (cm_pos)" in 29.2106ms (afa2e885)
+2019-02-06T10:20:09.0651633+07:00 0HLKBS7KIBRVS:0000000D [INF] Executed endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (99874f2b)
+2019-02-06T10:20:09.0680073+07:00 0HLKBS7KIBRVS:0000000D [INF] Request finished in 41.283ms 200 text/html; charset=utf-8 (791a596a)
+2019-02-06T10:20:11.4822861+07:00 0HLKBS7KIBRVS:0000000E [INF] Request starting HTTP/1.1 GET https://localhost:5001/   (ca22a1cb)
+2019-02-06T10:20:11.4849301+07:00 0HLKBS7KIBRVS:0000000E [INF] Executing endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (500cc934)
+2019-02-06T10:20:11.4877101+07:00 0HLKBS7KIBRVS:0000000E [INF] Route matched with "{action = \"Index\", controller = \"product\"}". Executing action "cm_pos.productcontrollers.productController.Index (cm_pos)" (a44c0341)
+2019-02-06T10:20:11.4913634+07:00 0HLKBS7KIBRVS:0000000E [INF] Executing action method "cm_pos.productcontrollers.productController.Index (cm_pos)" - Validation state: Valid (dad538d7)
+2019-02-06T10:20:11.4953718+07:00 0HLKBS7KIBRVS:0000000E [INF] Entity Framework Core "2.2.1-servicing-10028" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.Sqlite"' with options: "None" (9958f5bb)
+2019-02-06T10:20:11.4981909+07:00 0HLKBS7KIBRVS:0000000E [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:20:11.5024780+07:00 0HLKBS7KIBRVS:0000000E [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p\".\"Product_ID\", \"p\".\"Category_ID\", \"p\".\"Code_Name\", \"p\".\"Detail\", \"p\".\"Image\", \"p\".\"Name\", \"p\".\"Price\", \"p\".\"Timestamp\", \"p.Categories\".\"Category_ID\", \"p.Categories\".\"Description\", \"p.Categories\".\"Name\"
+FROM \"Products\" AS \"p\"
+INNER JOIN \"Category\" AS \"p.Categories\" ON \"p\".\"Category_ID\" = \"p.Categories\".\"Category_ID\"
+ORDER BY \"p\".\"Product_ID\"" (0723d8ff)
+2019-02-06T10:20:11.5054037+07:00 0HLKBS7KIBRVS:0000000E [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p.ProductsSizeList\".\"ID\", \"p.ProductsSizeList\".\"Count\", \"p.ProductsSizeList\".\"Product_ID\", \"p.ProductsSizeList\".\"Size\"
+FROM \"Product_Size\" AS \"p.ProductsSizeList\"
+INNER JOIN (
+    SELECT DISTINCT \"p0\".\"Product_ID\"
+    FROM \"Products\" AS \"p0\"
+    INNER JOIN \"Category\" AS \"p.Categories0\" ON \"p0\".\"Category_ID\" = \"p.Categories0\".\"Category_ID\"
+) AS \"t\" ON \"p.ProductsSizeList\".\"Product_ID\" = \"t\".\"Product_ID\"
+ORDER BY \"t\".\"Product_ID\"" (0723d8ff)
+2019-02-06T10:20:11.5100358+07:00 0HLKBS7KIBRVS:0000000E [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA foreign_keys=ON;" (0723d8ff)
+2019-02-06T10:20:11.5124944+07:00 0HLKBS7KIBRVS:0000000E [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM \"Category\" AS \"c\"" (0723d8ff)
+2019-02-06T10:20:11.5151535+07:00 0HLKBS7KIBRVS:0000000E [INF] Executed action method "cm_pos.productcontrollers.productController.Index (cm_pos)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 21.2764ms. (50a9e262)
+2019-02-06T10:20:11.5178446+07:00 0HLKBS7KIBRVS:0000000E [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-02-06T10:20:11.5216090+07:00 0HLKBS7KIBRVS:0000000E [INF] Executed ViewResult - view "Index" executed in 4.1231ms. (f66409e9)
+2019-02-06T10:20:11.5243423+07:00 0HLKBS7KIBRVS:0000000E [INF] Executed action "cm_pos.productcontrollers.productController.Index (cm_pos)" in 33.9399ms (afa2e885)
+2019-02-06T10:20:11.5269151+07:00 0HLKBS7KIBRVS:0000000E [INF] Executed endpoint '"cm_pos.productcontrollers.productController.Index (cm_pos)"' (99874f2b)
+2019-02-06T10:20:11.5292169+07:00 0HLKBS7KIBRVS:0000000E [INF] Request finished in 47.0528ms 200 text/html; charset=utf-8 (791a596a)
